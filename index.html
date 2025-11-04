@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-background text-on-surface">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar Preppers Connect</title>
+    <style>
+      :root {
+        /* Light Theme Colors */
+        --color-primary: 99 102 241; /* indigo-500 */
+        --color-secondary: 245 158 11; /* amber-500 */
+        --color-background: 249 250 251; /* gray-50 */
+        --color-surface: 255 255 255; /* white */
+        --color-on-surface: 17 24 39; /* gray-900 */
+        --color-on-surface-secondary: 107 114 128; /* gray-500 */
+        --color-background-contrast: 255 255 255; /* white for button text */
+      }
+      .dark {
+        /* Dark Theme Colors (Original) */
+        --color-primary: 165 180 252; /* #A5B4FC */
+        --color-secondary: 251 191 36; /* #FBBF24 */
+        --color-background: 17 24 39; /* #111827 */
+        --color-surface: 31 41 55; /* #1F2937 */
+        --color-on-surface: 249 250 251; /* #F9FAFB */
+        --color-on-surface-secondary: 156 163 175; /* #9CA3AF */
+        --color-background-contrast: 0 0 0; /* black for button text */
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: 'rgb(var(--color-primary) / <alpha-value>)',
+              secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+              background: 'rgb(var(--color-background) / <alpha-value>)',
+              surface: 'rgb(var(--color-surface) / <alpha-value>)',
+              'on-surface': 'rgb(var(--color-on-surface) / <alpha-value>)',
+              'on-surface-secondary': 'rgb(var(--color-on-surface-secondary) / <alpha-value>)',
+              'background-contrast': 'rgb(var(--color-background-contrast) / <alpha-value>)',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
